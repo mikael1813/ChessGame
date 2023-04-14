@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     Game g;
-    tuple<unsigned short int, unsigned short int> t = g.get_actual_postion("x3");
+    tuple<unsigned short int, unsigned short int> t = g.get_actual_postion("A3");
     QCoreApplication a(argc, argv);
 
     return a.exec();

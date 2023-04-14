@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <regex>
 
 using namespace std;
 
@@ -18,6 +19,19 @@ public:
 	//position is a actual chess board position like E3 (so position is like [a-hA-H][0-9])
 	//return actual position in matrix of position (ex. get_actual_postion("E3") => (5,4) )
 	tuple<unsigned short int, unsigned short int> get_actual_postion(string position);
+
+	vector< tuple<unsigned short int, unsigned short int>> get_all_possible_moves(const unsigned short int i, const unsigned short int j);
+
+	vector< tuple<unsigned short int, unsigned short int>> get_all_bishop_moves(const unsigned short int i, const unsigned short int j);
+
+	vector< tuple<unsigned short int, unsigned short int>> get_all_rook_moves(const unsigned short int i, const unsigned short int j);
+
+	vector< tuple<unsigned short int, unsigned short int>> get_all_queen_moves(const unsigned short int i, const unsigned short int j);
+
+	vector< tuple<unsigned short int, unsigned short int>> get_moves(const short int i, const short int j, const short int k, const short int l,const char color);
+
+
+
 };
 
 
